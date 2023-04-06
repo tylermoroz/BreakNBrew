@@ -1,3 +1,5 @@
+import { tabs } from "./tabs.js";
 import { homePage } from "./home.js";
 
-homePage();
+document.body.appendChild(tabs());
+document.body.appendChild(homePage());
