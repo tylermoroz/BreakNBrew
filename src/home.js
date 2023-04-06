@@ -1,4 +1,4 @@
-import Cafe from "./cafe.jpg";
+import Cafe from "./assets/cafe.jpg";
 
 const homePage = () => {
   const content = document.getElementById("content");
