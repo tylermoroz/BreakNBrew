@@ -12,8 +12,19 @@ const tabs = () => {
   tabContent.appendChild(homeTab);
   tabContent.appendChild(menuTab);
 
-  //   homeTab.addEventListener("click", () => {});
-  //   menuTab.addEventListener('click', () => {});
+  homeTab.addEventListener("click", () => {
+    while (content.firstChild) {
+      content.firstChild.remove();
+    }
+    homePage();
+  });
+
+  menuTab.addEventListener("click", () => {
+    while (content.firstChild) {
+      content.firstChild.remove();
+    }
+    menu();
+  });
 
   return tabContent;
 };

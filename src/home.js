@@ -2,6 +2,7 @@ import Cafe from "./assets/cafe.jpg";
 
 const homePage = () => {
   const content = document.getElementById("content");
+  const homeDiv = document.createElement("div");
   const headline = document.createElement("h1");
   const cafeImg = new Image();
   const copy = document.createElement("p");
@@ -32,9 +33,12 @@ const homePage = () => {
   locationHead.textContent = "Location";
   address.textContent = "12345 200 Street, Edmonton, Alberta";
 
-  content.appendChild(headline);
-  content.appendChild(cafeImg);
-  content.appendChild(copy);
+  content.appendChild(homeDiv);
+  homeDiv.appendChild(headline);
+  homeDiv.appendChild(cafeImg);
+  homeDiv.appendChild(copy);
+  homeDiv.appendChild(hours);
+  homeDiv.appendChild(locationDiv);
   hours.appendChild(hoursHead);
   hours.appendChild(sundayHours);
   hours.appendChild(mondayHours);
@@ -43,10 +47,8 @@ const homePage = () => {
   hours.appendChild(thursdayHours);
   hours.appendChild(fridayHours);
   hours.appendChild(saturdayHours);
-  content.appendChild(hours);
   locationDiv.appendChild(locationHead);
   locationDiv.appendChild(address);
-  content.appendChild(locationDiv);
 
   return content;
 };
