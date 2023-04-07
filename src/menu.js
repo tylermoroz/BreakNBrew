@@ -70,12 +70,44 @@ const veganSausageTofu = foodItem(
   "$17"
 );
 
+const displayMenuItem = (item) => {
+  const foodItemDiv = document.createElement("div");
+  const itemImg = new Image();
+  const itemName = document.createElement("h3");
+  const itemDesc = document.createElement("p");
+  const itemPrice = document.createElement("p");
+
+  itemImg.src = item.imgSrc;
+  itemName.textContent = item.name;
+  itemDesc.textContent = item.desc;
+  itemPrice.textContent = item.price;
+
+  foodItemDiv.appendChild(itemImg);
+  foodItemDiv.appendChild(itemName);
+  foodItemDiv.appendChild(itemDesc);
+  foodItemDiv.appendChild(itemPrice);
+
+  return foodItemDiv;
+};
+
 const menu = () => {
   const content = document.getElementById("content");
+  const menuDiv = document.createElement("div");
   const head = document.createElement("h1");
 
   head.textContent = "Food";
-  content.appendChild(head);
+
+  content.appendChild(menuDiv);
+  menuDiv.appendChild(head);
+  menuDiv.appendChild(displayMenuItem(belgianWaffles));
+  menuDiv.appendChild(displayMenuItem(eggsBenny));
+  menuDiv.appendChild(displayMenuItem(breakfastWaffle));
+  menuDiv.appendChild(displayMenuItem(chickenWaffles));
+  menuDiv.appendChild(displayMenuItem(cinnamonBun));
+  menuDiv.appendChild(displayMenuItem(frenchToast));
+  menuDiv.appendChild(displayMenuItem(huevosRancheros));
+  menuDiv.appendChild(displayMenuItem(pulledPorkHash));
+  menuDiv.appendChild(displayMenuItem(veganSausageTofu));
 
   return content;
 };
