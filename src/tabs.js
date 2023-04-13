@@ -20,9 +20,6 @@ const tabs = () => {
   });
 
   menuTab.addEventListener("click", () => {
-    while (content.firstChild) {
-      content.firstChild.remove();
-    }
     menu();
   });
 
