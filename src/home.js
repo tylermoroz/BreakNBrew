@@ -1,4 +1,5 @@
 import Cafe from "./assets/cafe.jpg";
+import "./style.css";
 
 const homePage = () => {
   const content = document.getElementById("content");
@@ -19,9 +20,18 @@ const homePage = () => {
   const locationHead = document.createElement("h2");
   const address = document.createElement("p");
 
+  homeDiv.id = "home";
+
   headline.textContent = "Welcome to Break N' Brew";
+  headline.classList.add("head");
+
   cafeImg.src = Cafe;
+  cafeImg.id = "cafe-img";
+
   copy.textContent = "Break N' Brew, Edmonton's premier rustic diner!";
+  copy.classList.add("copy");
+
+  hours.id = "hours";
   hoursHead.textContent = "Hours";
   sundayHours.textContent = "Sunday: 8am - 4pm";
   mondayHours.textContent = "Monday: 8am - 11pm";
@@ -30,6 +40,7 @@ const homePage = () => {
   thursdayHours.textContent = "Thursday: 8am - 11pm";
   fridayHours.textContent = "Friday: 8am - 1am";
   saturdayHours.textContent = "Saturday: 8am - 1am";
+
   locationHead.textContent = "Location";
   address.textContent = "12345 200 Street, Edmonton, Alberta";
 
