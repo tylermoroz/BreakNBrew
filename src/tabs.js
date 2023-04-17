@@ -6,6 +6,10 @@ const tabs = () => {
   const homeTab = document.createElement("button");
   const menuTab = document.createElement("button");
 
+  tabContent.id = "tabs-content";
+  homeTab.classList.add("tab");
+  menuTab.classList.add("tab");
+
   homeTab.textContent = "Home";
   menuTab.textContent = "Menu";
 

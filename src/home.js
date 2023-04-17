@@ -41,6 +41,7 @@ const homePage = () => {
   fridayHours.textContent = "Friday: 8am - 1am";
   saturdayHours.textContent = "Saturday: 8am - 1am";
 
+  locationDiv.id = "location";
   locationHead.textContent = "Location";
   address.textContent = "12345 200 Street, Edmonton, Alberta";
 
