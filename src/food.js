@@ -97,6 +97,8 @@ const food = () => {
 
   head.textContent = "Food";
 
+  menuDiv.id = "food-menu";
+
   content.appendChild(menuDiv);
   menuDiv.appendChild(head);
   menuDiv.appendChild(displayMenuItem(belgianWaffles));
