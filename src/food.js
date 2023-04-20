@@ -7,6 +7,7 @@ import frenchT from "./assets/frenchToast.jpg";
 import huevos from "./assets/huevos.jpg";
 import pulledPork from "./assets/pulledPorkHash.jpg";
 import veganSausage from "./assets/veganSausageTofu.jpg";
+import { menu } from "./menu";
 
 const foodItem = (imgSrc, name, desc, price) => {
   return { imgSrc, name, desc, price };
@@ -82,6 +83,8 @@ const displayMenuItem = (item) => {
   itemDesc.textContent = item.desc;
   itemPrice.textContent = item.price;
 
+  foodItemDiv.classList.add("food-item");
+
   foodItemDiv.appendChild(itemImg);
   foodItemDiv.appendChild(itemName);
   foodItemDiv.appendChild(itemDesc);
@@ -93,23 +96,26 @@ const displayMenuItem = (item) => {
 const food = () => {
   const content = document.getElementById("content");
   const menuDiv = document.createElement("div");
+  const foodMenu = document.createElement("div");
   const head = document.createElement("h1");
 
   head.textContent = "Food";
 
-  menuDiv.id = "food-menu";
+  menuDiv.id = "menu-page";
+  foodMenu.id = "food-menu";
 
   content.appendChild(menuDiv);
   menuDiv.appendChild(head);
-  menuDiv.appendChild(displayMenuItem(belgianWaffles));
-  menuDiv.appendChild(displayMenuItem(eggsBenny));
-  menuDiv.appendChild(displayMenuItem(breakfastWaffle));
-  menuDiv.appendChild(displayMenuItem(chickenWaffles));
-  menuDiv.appendChild(displayMenuItem(cinnamonBun));
-  menuDiv.appendChild(displayMenuItem(frenchToast));
-  menuDiv.appendChild(displayMenuItem(huevosRancheros));
-  menuDiv.appendChild(displayMenuItem(pulledPorkHash));
-  menuDiv.appendChild(displayMenuItem(veganSausageTofu));
+  menuDiv.appendChild(foodMenu);
+  foodMenu.appendChild(displayMenuItem(belgianWaffles));
+  foodMenu.appendChild(displayMenuItem(eggsBenny));
+  foodMenu.appendChild(displayMenuItem(breakfastWaffle));
+  foodMenu.appendChild(displayMenuItem(chickenWaffles));
+  foodMenu.appendChild(displayMenuItem(cinnamonBun));
+  foodMenu.appendChild(displayMenuItem(frenchToast));
+  foodMenu.appendChild(displayMenuItem(huevosRancheros));
+  foodMenu.appendChild(displayMenuItem(pulledPorkHash));
+  foodMenu.appendChild(displayMenuItem(veganSausageTofu));
 
   return content;
 };
