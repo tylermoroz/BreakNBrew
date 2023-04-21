@@ -13,6 +13,10 @@ const menu = () => {
   foodTab.textContent = "Food";
   drinkTab.textContent = "Drinks";
 
+  menuTabs.id = "tabs-content";
+  foodTab.classList.add("tab");
+  drinkTab.classList.add("tab");
+
   content.appendChild(menuTabs);
   menuTabs.appendChild(foodTab);
   menuTabs.appendChild(drinkTab);
