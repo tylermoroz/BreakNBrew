@@ -7,7 +7,6 @@ import frenchT from "./assets/frenchToast.jpg";
 import huevos from "./assets/huevos.jpg";
 import pulledPork from "./assets/pulledPorkHash.jpg";
 import veganSausage from "./assets/veganSausageTofu.jpg";
-import { menu } from "./menu";
 
 const foodItem = (imgSrc, name, desc, price) => {
   return { imgSrc, name, desc, price };

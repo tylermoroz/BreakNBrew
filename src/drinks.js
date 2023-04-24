@@ -76,6 +76,8 @@ const feverTree = drinkItem(
   "$4"
 );
 
+const water = drinkItem("Water", "Mineral Water", "$0");
+
 const displayDrinks = (item) => {
   const drinkItemDiv = document.createElement("div");
   const drinkName = document.createElement("h3");
@@ -86,6 +88,8 @@ const displayDrinks = (item) => {
   drinkDesc.textContent = item.desc;
   drinkPrice.textContent = item.price;
 
+  drinkItemDiv.classList.add("drink-item");
+
   drinkItemDiv.appendChild(drinkName);
   drinkItemDiv.appendChild(drinkDesc);
   drinkItemDiv.appendChild(drinkPrice);
@@ -95,30 +99,36 @@ const displayDrinks = (item) => {
 
 const drinks = () => {
   const content = document.getElementById("content");
-  const drinkDiv = document.createElement("div");
+  const drinkPage = document.createElement("div");
   const head = document.createElement("h1");
+  const drinkMenu = document.createElement("div");
 
   head.textContent = "Drinks";
 
-  content.appendChild(drinkDiv);
-  drinkDiv.appendChild(head);
-  drinkDiv.appendChild(displayDrinks(coffeeTea));
-  drinkDiv.appendChild(displayDrinks(sanPellegrinoFruit));
-  drinkDiv.appendChild(displayDrinks(espresso));
-  drinkDiv.appendChild(displayDrinks(sanPellegrinoWater));
-  drinkDiv.appendChild(displayDrinks(americano));
-  drinkDiv.appendChild(displayDrinks(latte));
-  drinkDiv.appendChild(displayDrinks(cappuccino));
-  drinkDiv.appendChild(displayDrinks(royalJamaican));
-  drinkDiv.appendChild(displayDrinks(chaiLatte));
-  drinkDiv.appendChild(displayDrinks(mulekicker));
-  drinkDiv.appendChild(displayDrinks(hotChocolateFog));
-  drinkDiv.appendChild(displayDrinks(painapplePunch));
-  drinkDiv.appendChild(displayDrinks(coldBrew));
-  drinkDiv.appendChild(displayDrinks(stieglNonAlc));
-  drinkDiv.appendChild(displayDrinks(sodaPop));
-  drinkDiv.appendChild(displayDrinks(annexCraftSoda));
-  drinkDiv.appendChild(displayDrinks(feverTree));
+  drinkPage.id = "drink-page";
+  drinkMenu.id = "drink-menu";
+
+  content.appendChild(drinkPage);
+  drinkPage.appendChild(head);
+  drinkPage.appendChild(drinkMenu);
+  drinkMenu.appendChild(displayDrinks(coffeeTea));
+  drinkMenu.appendChild(displayDrinks(sanPellegrinoFruit));
+  drinkMenu.appendChild(displayDrinks(espresso));
+  drinkMenu.appendChild(displayDrinks(sanPellegrinoWater));
+  drinkMenu.appendChild(displayDrinks(americano));
+  drinkMenu.appendChild(displayDrinks(latte));
+  drinkMenu.appendChild(displayDrinks(cappuccino));
+  drinkMenu.appendChild(displayDrinks(royalJamaican));
+  drinkMenu.appendChild(displayDrinks(chaiLatte));
+  drinkMenu.appendChild(displayDrinks(mulekicker));
+  drinkMenu.appendChild(displayDrinks(hotChocolateFog));
+  drinkMenu.appendChild(displayDrinks(painapplePunch));
+  drinkMenu.appendChild(displayDrinks(coldBrew));
+  drinkMenu.appendChild(displayDrinks(stieglNonAlc));
+  drinkMenu.appendChild(displayDrinks(sodaPop));
+  drinkMenu.appendChild(displayDrinks(annexCraftSoda));
+  drinkMenu.appendChild(displayDrinks(feverTree));
+  drinkMenu.appendChild(displayDrinks(water));
 
   return content;
 };
